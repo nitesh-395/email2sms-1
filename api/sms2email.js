@@ -3,7 +3,7 @@ const MessagingResponse = require('twilio').twiml.MessagingResponse;
 module.exports = (req, res) => {
     //Specify API Key for Sendgrid
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+console.log(process.env.SENDGRID_API_KEY);
     //Set from address as <number>@EMAIL_DOMAIN
     const fromAddress = req.body.From.replace("+", "") + `@${process.env.EMAIL_DOMAIN}`;
 
